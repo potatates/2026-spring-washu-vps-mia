@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibby's Menu</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            line-height: 1.7;
+            background-color: #fffbf0;
+            color: #2c2416;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 48px;
+            font-weight: bold;
+            font-style: normal;
+            color: #d4691d;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: normal;
+            color: #5c4a3a;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            letter-spacing: 0.3px;
+        }
+
+        .booking {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .booking a {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #c25a28;
+            text-decoration: none;
+            padding: 12px 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .booking a:hover {
+            background-color: #d4691d;
+        }
+
+        details {
+            margin-bottom: 20px;
+        }
+
+        summary {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 28px;
+            font-weight: bold;
+            font-style: italic;
+            color: #8b5a3c;
+            text-align: left;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            line-height: 1.4;
+            padding: 10px;
+            background-color: #fff4e0;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        summary:hover {
+            background-color: #ffe4b5;
+        }
+
+        summary::before {
+            content: "▶ ";
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        details[open] summary::before {
+            content: "▼ ";
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        td {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: normal;
+            text-align: left;
+            line-height: 2;
+            padding: 5px;
+        }
+
+        b {
+            font-weight: bold;
+            font-size: 18px;
+            color: #c25a28;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        em {
+            font-style: italic;
+            font-size: 14px;
+            color: #5c4a3a;
+            line-height: 1.8;
+        }
+
+        p {
+            text-align: center;
+            font-size: 15px;
+            font-style: italic;
+            font-weight: normal;
+            color: #555;
+            line-height: 1.7;
+            letter-spacing: 0.3px;
+        }
+
+        .note {
+            font-size: 14px;
+            font-style: italic;
+            color: #666;
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ibby's Menu</h1>
+        
+        <div class="description">
+            Nestled at the heart of the Washington University in St. Louis campus, Ibby's is located in the Danforth University Center. This unique campus bistro offers fresh, creative cuisine inspired by local ingredients and the seasons. Behind the scenes, Ibby's chefs apply classical cooking techniques to their ingredients to produce cuisine that is stunning to the eye and exciting to the palate. With a focus on sustainable and locally sourced ingredients, Ibby's offers a delightful, fresh menu to satisfy all your dining needs.
+        </div>
+
+        <div class="booking">
+            <a href="https://www.opentable.com/r/ibbys-st-louis" target="_blank">Book a Table</a>
+        </div>
+
+        <details open>
+            <summary>Appetizers</summary>
+            <table>
+                <tr>
+                    <td><b>Wings</b></td>
+                    <td>12.99</td>
+                </tr>
+                <tr>
+                    <td><em>Fried Crispy Chicken Wings, Celery, Carrot, Ranch, Choice of Traditional Buffalo or Korean Barbecue Sauce</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Maryland Crab Cakes</b></td>
+                    <td>11.99</td>
+                </tr>
+                <tr>
+                    <td><em>Jumbo Lump Roasted Corn Relish, Chipotle Aioli</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Toasted Ravioli</b></td>
+                    <td>11.99</td>
+                </tr>
+                <tr>
+                    <td><em>Classic Saint Louis Style Ravioli, Marinara, Parmesan</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Bruschetta</b></td>
+                    <td>11.99</td>
+                </tr>
+                <tr>
+                    <td><em>Heirloom Tomatoes, Whipped Ricotta on Toasted Baguette with Balsamic Glaze and Basil Oil</em></td>
+                    <td></td>
+                </tr>
+            </table>
+        </details>
+
+        <details open>
+            <summary>Soups</summary>
+            <table>
+                <tr>
+                    <td><b>Tomato Bisque</b></td>
+                    <td>4.99</td>
+                </tr>
+                <tr>
+                    <td><em>Heirloom Tomatoes, Vegetable Stock, Fresh Basil, Croutons</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Soup Du Jour</b></td>
+                    <td>5.99</td>
+                </tr>
+            </table>
+        </details>
+
+        <details open>
+            <summary>Salads</summary>
+            <table>
+                <tr>
+                    <td><b>Ibby's Beets Salad</b></td>
+                    <td>7.99</td>
+                </tr>
+                <tr>
+                    <td><em>Ibby's Green Blend tossed in Balsamic Dressing, Berries, Roasted Beets, Red Onion, Orange Segments, Goat Cheese, tossed Focaccia Toast</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Garden Salad</b></td>
+                    <td>9.99</td>
+                </tr>
+                <tr>
+                    <td><em>Romaine and Iceberg Lettuce Mix, Cucumbers, Tomatoes, Carrots, Croutons, Your Choice of Dressing</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Kale Caesar Salad</b></td>
+                    <td>9.99</td>
+                </tr>
+                <tr>
+                    <td><em>Blend of Kale and Romaine Lettuce, Caesar Dressing, Parmesan Crisp, Croutons, Shaved Parmesan</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Greek Salad</b></td>
+                    <td>9.99</td>
+                </tr>
+                <tr>
+                    <td><em>Ibby's Green Blend tossed in Lemon Vinaigrette Dressing, Tomatoes, Red Onion, Pepperoncini Kalamata, Cucumber, Feta</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Burrata Caprese Salad</b></td>
+                    <td>9.99</td>
+                </tr>
+                <tr>
+                    <td><em>Imported Burrata, Heirloom Tomatoes, Mesculn Greens, Lemon Vinaigrette, Pickled Onion, Balsamic Glaze, Maldon Salt, Basil Oil, Micro Basil. Served with Crostini.</em></td>
+                    <td></td>
+                </tr>
+            </table>
+            <p><em>Add on's: Grilled Chicken 4.99, Grilled Shrimp Skewer (6) 5.99, Falafel Balls (4) 3.99</em></p>
+        </details>
+
+        <details open>
+            <summary>Sandwiches</summary>
+            <p class="note">Served with Hand Cut Fries or Sweet Potato Fries. Add 1.49 for Side Salad or Vegetable Du Jour</p>
+            <table>
+                <tr>
+                    <td><b>Quattro Formaggio Panini</b></td>
+                    <td>10.99</td>
+                </tr>
+                <tr>
+                    <td><em>Multigrain Bread, Boursin Cheese, Provolone, Gruyere, Sharp Cheddar, Griddled a la plancha. Add Bacon/Tomato.</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Smoked Turkey Club</b></td>
+                    <td>12.99</td>
+                </tr>
+                <tr>
+                    <td><em>Croissant, Garlic Aioli, Smoked Turkey, Thick Cut Bacon, Havarti, Avocado, Tomato, Lettuce</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Falafel Shawarma</b></td>
+                    <td>13.99</td>
+                </tr>
+                <tr>
+                    <td><em>Traditional Falafel Wrap, Hummus, Tzatziki, Pickled Onion, Sliced Tomato, Lettuce, Shredded Carrot</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Italian Beef Sandwich</b></td>
+                    <td>12.99</td>
+                </tr>
+                <tr>
+                    <td><em>Thin Sliced Seasoned Roast Beef, Au Jus, Giardiniera</em></td>
+                    <td></td>
+                </tr>
+            </table>
+        </details>
+
+        <details open>
+            <summary>Entrees</summary>
+            <table>
+                <tr>
+                    <td><b>Ibby's Steak</b></td>
+                    <td>31.99</td>
+                </tr>
+                <tr>
+                    <td><em>12oz Wenneman's Meat Co. Ribeye, Garlic Mashed Potato, Wild Mushrooms, Veg Du Jour, Chophouse Butter, Frizzled Onion</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Prawn Pasta</b></td>
+                    <td>21.99</td>
+                </tr>
+                <tr>
+                    <td><em>Sauteed Prawns, Spaghetti, Shallots, Roasted Garlic, Tomato Basil Cream Sauce</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Pan Roasted Chicken</b></td>
+                    <td>20.99</td>
+                </tr>
+                <tr>
+                    <td><em>Herb Marinated Airline Chicken, Wild Yellow Rice Pilaf, Tarragon Veloute, Chef Choice Vegetables</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Grilled Lamb Chops</b></td>
+                    <td>24.99</td>
+                </tr>
+                <tr>
+                    <td><em>Marinated Grilled Lamb Chops, Demi Glaze, Garlic Mashed Potatoes, Veg Du Jour</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Autumn Ravioli Primavera</b></td>
+                    <td>18.99</td>
+                </tr>
+                <tr>
+                    <td><em>Ricotta Ravioli, Roasted Autumn Squash Mix, Wild Mushrooms, Fresh Tomatoes, Sage, Butter, Wine Sauce, Focaccia Crostini</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Lobster Mac and Cheese</b></td>
+                    <td>21.99</td>
+                </tr>
+                <tr>
+                    <td><em>Maine Lobster, Cavatappi, Garlic Panko, Gruyere Mornay</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Jerk Salmon</b></td>
+                    <td>20.99</td>
+                </tr>
+                <tr>
+                    <td><em>Jerk Marinated Atlantic Salmon, Yellow Rice, Pineapple Pico Chef Choice Vegetables</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Ibby's House Burger</b></td>
+                    <td>13.99</td>
+                </tr>
+                <tr>
+                    <td><em>8oz Beef Patty, Lettuce, Tomato, Onion, Kosher Pickle, Brioche, American Cheese. Add Bacon 1.29</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Impossible Burger</b></td>
+                    <td>13.99</td>
+                </tr>
+                <tr>
+                    <td><em>Plant-Based Burger Patty, Lettuce, Tomato, Onion, Pickles, Chipotle Aioli, Brioche, Choice of Cheese</em></td>
+                    <td></td>
+                </tr>
+            </table>
+        </details>
+
+        <details open>
+            <summary>Sides</summary>
+            <table>
+                <tr>
+                    <td><b>Ibby's Fries</b></td>
+                    <td>3.99</td>
+                </tr>
+                <tr>
+                    <td><em>Hand Cut Seasoned Fries</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Seasonal Vegetables</b></td>
+                    <td>3.99</td>
+                </tr>
+                <tr>
+                    <td><em>Chef Choice Seasonal Vegetable</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>DUC Garden Side Salad</b></td>
+                    <td>3.99</td>
+                </tr>
+                <tr>
+                    <td><em>Romaine and Iceberg Lettuce Mix, Cucumbers, Tomatoes, Carrots, Croutons, Choice of Dressing</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Kale Caesar Side Salad</b></td>
+                    <td>3.99</td>
+                </tr>
+                <tr>
+                    <td><em>Blend of Kale and Romaine Lettuce, Caesar Dressing, Parmesan Crisp, Crouton, Shaved Parmesan</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Sweet Potato Fries</b></td>
+                    <td>3.99</td>
+                </tr>
+                <tr>
+                    <td><em>Skin on, Tossed in Cinnamon and Sugar</em></td>
+                    <td></td>
+                </tr>
+            </table>
+        </details>
+
+        <details open>
+            <summary>Desserts</summary>
+            <table>
+                <tr>
+                    <td><b>Baked All-Nighter</b></td>
+                    <td>8.49</td>
+                </tr>
+                <tr>
+                    <td><em>Chocolate Chip Cookie, Ice Cream, Rum Caramel Sauce</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Strawberry Shortcake</b></td>
+                    <td>8.99</td>
+                </tr>
+                <tr>
+                    <td><em>Macerated Strawberries, Whipped Cream</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Banana Foster</b></td>
+                    <td>8.99</td>
+                </tr>
+                <tr>
+                    <td><em>Caramelized Banana, Rum Sauce, Ice Cream</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Hank's New York Style Cheesecake</b></td>
+                    <td>9.99</td>
+                </tr>
+                <tr>
+                    <td><em>Fresh Berry Compote</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Flourless Chocolate Cake</b></td>
+                    <td>7.99</td>
+                </tr>
+                <tr>
+                    <td><em>Bourbon Créme, Wild Berries</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Bold Spoon Ice Cream</b></td>
+                    <td>4.49</td>
+                </tr>
+                <tr>
+                    <td><em>12oz Rotating Flavors</em></td>
+                    <td></td>
+                </tr>
+            </table>
+        </details>
+
+        <details open>
+            <summary>Drinks</summary>
+            <table>
+                <tr>
+                    <td><b>Soft Drinks</b></td>
+                    <td>2.99</td>
+                </tr>
+                <tr>
+                    <td><em>Fountain Soda. Assorted Coke Products</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Assorted Hot Teas</b></td>
+                    <td>2.99</td>
+                </tr>
+                <tr>
+                    <td><em>Green, Early Grey, Black & Lemon Tea. Add Lemon, Honey.</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Regular Coffee</b></td>
+                    <td>3.19</td>
+                </tr>
+                <tr>
+                    <td><em>8oz Kaldi's Dark Roast. Add on Cream, Assorted Sugars.</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Hot Chocolate</b></td>
+                    <td>3.09</td>
+                </tr>
+                <tr>
+                    <td><em>8oz Hot Chocolate. Add on Mini Marshmallows.</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Iced Coffee</b></td>
+                    <td>3.19</td>
+                </tr>
+                <tr>
+                    <td><em>16oz Kaldi's Dark Roast over Ice with Half and Half. Add Whipped Creme.</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Fitz Root Beer</b></td>
+                    <td>2.09</td>
+                </tr>
+                <tr>
+                    <td><em>12oz Bottled Fitz Root Beer. Add Ice Cream +2.99</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Ibby's Temple</b></td>
+                    <td>3.99</td>
+                </tr>
+                <tr>
+                    <td><em>12oz Ginger Ale, Lemon Lime Soda, Lemonade and Cherry Syrup Garnished with Cherry</em></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Cider Mule</b></td>
+                    <td>4.29</td>
+                </tr>
+                <tr>
+                    <td><em>12oz Apple Cider, Ginger, Lemon Peel, Honey and Club Soda, Garnished with Sliced Apple</em></td>
+                    <td></td>
+                </tr>
+            </table>
+        </details>
+
+    </div>
+
+</body>
+</html>
