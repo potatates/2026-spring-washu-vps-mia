@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seeing in the Small — A Conversation with Alicia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f5f0e8;
+      --warm-white: #faf8f4;
+      --brown: #5c3d2e;
+      --terracotta: #c97d5a;
+      --sage: #767c62;
+      --dark: #2a1f1a;
+      --mid: #7a6558;
+      --light-rule: #e0d8cc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--warm-white);
+      color: var(--dark);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background-color: var(--cream);
+      border-bottom: 1px solid var(--light-rule);
+      padding: 60px 40px 48px;
+      text-align: center;
+    }
+
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--brown);
+      margin-bottom: 14px;
+    }
+
+    header h1 em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: var(--mid);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ── INTRO PHOTO ── */
+    .hero-photo {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid var(--light-rule);
+      background-color: #d9cfc4;
+    }
+
+    .hero-placeholder {
+      width: 100%;
+      height: 380px;
+      background: linear-gradient(135deg, #d9cfc4 0%, #c4b5a0 50%, #b8a898 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--light-rule);
+    }
+
+    .hero-placeholder span {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #7a6a5a;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── CONTEXT BOX ── */
+    .context-box {
+      margin: 56px auto 0;
+      padding: 32px 36px;
+      background-color: var(--cream);
+      border-left: 3px solid var(--terracotta);
+      border-radius: 2px;
+    }
+
+    .context-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 10px;
+    }
+
+    .context-box p {
+      font-size: 14.5px;
+      color: var(--mid);
+      line-height: 1.75;
+    }
+
+    /* ── PHOTO ROW ── */
+    .photo-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 56px 0;
+    }
+
+    .photo-slot {
+      aspect-ratio: 4/3;
+      background: linear-gradient(160deg, #d5cabb 0%, #c4b5a0 100%);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .photo-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-slot span {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: #8a7a6a;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .photo-caption {
+      text-align: center;
+      font-size: 12px;
+      color: var(--mid);
+      margin-top: -8px;
+      margin-bottom: 48px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 48px 0 40px;
+    }
+
+    .divider hr {
+      flex: 1;
+      border: none;
+      border-top: 1px solid var(--light-rule);
+    }
+
+    .divider-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--terracotta);
+      opacity: 0.7;
+    }
+
+    /* ── INTERVIEW ── */
+    .interview-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--brown);
+      margin-bottom: 36px;
+    }
+
+    .exchange {
+      margin-bottom: 36px;
+    }
+
+    .speaker {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .speaker.mia {
+      color: var(--sage);
+    }
+
+    .speaker.alicia {
+      color: var(--terracotta);
+    }
+
+    .exchange p {
+      font-size: 15.5px;
+      color: var(--dark);
+      line-height: 1.8;
+    }
+
+    /* pull quotes */
+    .pull-quote {
+      margin: 48px -24px;
+      padding: 36px 40px;
+      background-color: var(--cream);
+      border-top: 1px solid var(--light-rule);
+      border-bottom: 1px solid var(--light-rule);
+      text-align: center;
+    }
+
+    .pull-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: var(--brown);
+      line-height: 1.5;
+      max-width: 560px;
+      margin: 0 auto 12px;
+    }
+
+    .pull-quote cite {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      font-style: normal;
+    }
+
+    /* ── SINGLE PHOTO ── */
+    .single-photo {
+      margin: 52px 0;
+    }
+
+    .single-photo .photo-slot {
+      aspect-ratio: 16/9;
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .single-photo .photo-caption {
+      margin-top: 10px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--light-rule);
+      margin-top: 80px;
+      padding: 36px 24px;
+      text-align: center;
+      background-color: var(--cream);
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.8;
+    }
+
+    footer strong {
+      color: var(--brown);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <p class="label">Interview</p>
+    <h1>Seeing in the Small</h1>
+    <p class="subtitle">A conversation with artist Alicia on warmth, memory, and noticing beauty in the everyday.</p>
+  </header>
+
+  <!-- HERO IMAGE — replace src with a real photo -->
+ <img src="Alicia.jpg" alt="Photo of Alicia" class="hero-photo" />
+  <div class="page">
+
+    <!-- CONTEXT -->
+    <div class="context-box">
+      <h2>About this interview</h2>
+      <p>Alicia is a multidisciplinary artist who sings, draws, writes poetry and short stories, and takes photographs. We sat down to talk about how her different creative outlets relate to each other, what drives her to make art, and why she thinks learning to notice small things changed her life. This interview has been lightly edited for clarity.</p>
+    </div>
+
+    <!-- PHOTO ROW 1 -->
+    <div class="photo-row" style="margin-top: 52px;">
+       <div class="photo-slot">
+     <img src="ins1.png" alt="Photo of Alicia" class="hero-photo" /></div>
+      <div class="photo-slot">
+       <img src="ins2.png" alt="Photo of Alicia" class="hero-photo" />
+      </div>
+    </div>
+    <p class="photo-caption">Alicia's Instragram Feed.</p>
+
+    <div class="divider"><hr /><div class="divider-dot"></div><hr /></div>
+
+    <!-- INTERVIEW -->
+    <div class="interview-section">
+      <h2>The Conversation</h2>
+
+      <div class="exchange">
+        <p class="speaker mia">Mia</p>
+        <p>You sing, you draw, you make really aesthetic Instagram posts and stories, you write poems and short stories, and you take a lot of pictures. Do you think of yourself as one type of artist, or do you feel like all these creative expressions are expressions of the same thing?</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker alicia">Alicia</p>
+        <p>With short stories and poems, I write to escape a reality I don't want to live in. When I'm trying to interpret someone else's artwork, it's similar — I use those forms to build another interpretation, because I don't like the very direct feelings I get just from looking at them. But when I take photos or draw things, I tend to take in more of reality and make it more memorable.</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker mia">Mia</p>
+        <p>Is there a common theme or feeling that runs through everything you make?</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker alicia">Alicia</p>
+        <p>I don't know about a common theme, because I create art about very different things. But one thing that's consistent is that I care a lot about the <em>temperature</em> of my art — how warm or cold it is — based on how emotionally attached I am to the subject.</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker mia">Mia</p>
+        <p>When you say temperature, do you mean how other people feel, or how you feel making it?</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker alicia">Alicia</p>
+        <p>It's primarily how I feel while making it, but usually other people feel the same way. Cold usually shows up when I'm writing, because I'm trying to form another reality. But when I'm recording memories through photography, that tends to be warmer — I enjoy being in the present and I like bringing those moments in.</p>
+      </div>
+
+    </div>
+
+    <!-- PULL QUOTE 1 -->
+    <div class="pull-quote">
+      <blockquote>"I care a lot about the temperature of my art — how warm or cold it is — based on how emotionally attached I am to the subject."</blockquote>
+      <cite>— Alicia</cite>
+    </div>
+
+    <div class="interview-section">
+
+      <div class="exchange">
+        <p class="speaker mia">Mia</p>
+        <p>Where does an idea usually start for you? A feeling, an image, a sound, a line of text?</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker alicia">Alicia</p>
+        <p>I get my inspiration through people — I really like to people-watch. I don't sit down and try to think of things to create art about. It's mostly just about what I see in the moment, and if I feel like I like it, I try to capture it. When I'm writing, it's inspired by things related to my life. I wrote a short story about dementia patients because I was volunteering at a nursing home, and I wanted to record that moment.</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker mia">Mia</p>
+        <p>You went to New York recently — every day I'd wake up and look at your Instagram stories and think, wow, you really see the beauty in things I wouldn't notice. Do you think everyone sees beauty?</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker alicia">Alicia</p>
+        <p>I think everyone can. Maybe some people choose not to because they're too caught up in other things. I used to be one of those people when I was younger, but then I got really depressed, and I started trying to find meaning in smaller things. You don't have to do big, profound things to feel happier — you just have to start noticing the small details. And when you get used to noticing them and logging them, you start finding reasons to walk more, to travel, to look around. It builds into this positive cycle of being happier, finding new things, logging them, and then wanting to look around even more.</p>
+      </div>
+
+    </div>
+
+    <!-- PULL QUOTE 2 -->
+    <div class="pull-quote">
+      <blockquote>"You don't have to do big, profound things to feel happier — you just have to start noticing the small details."</blockquote>
+      <cite>— Alicia</cite>
+    </div>
+
+    <!-- SINGLE PHOTO -->
+   <div class="single-photo">
+  <img src="nyc.png" alt="Photo from Alicia's travels" style="width:100%; border-radius:4px;" />
+  <p class="photo-caption">From Alicia's travels.</p>
+  </div>
+    <div class="interview-section">
+
+      <div class="exchange">
+        <p class="speaker mia">Mia</p>
+        <p>How would you describe your creative process? Is it spontaneous, or more gradual?</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker alicia">Alicia</p>
+        <p>I think the gradual process describes how I come up with a lot of my work. But the art I'm most proud of has usually been carefully curated. When I sit down and try to force an idea, I just can't — they come out really lame, and I end up imitating other artists, which makes my art feel fake. So I'd say spontaneous, overall.</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker mia">Mia</p>
+        <p>Do you think you're critical of your own art?</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker alicia">Alicia</p>
+        <p>It depends on the kind of art and when I made it. If I wrote a depressing poem at 2 AM and looked back at it the next morning, I'd probably think it was really bad. With photography, or especially with my singing, I'll record something and think it's good in the moment — and then three days later I'll listen back and realize the pitch was off. I'm really critical about my singing. But with photography it's almost the opposite — I'll have photos I really love, and even if someone tells me they're not worth posting, I get sad but I still post them, because I still think they're good.</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker mia">Mia</p>
+        <p>Do you think what you make matches what you're thinking of, or is there a gap?</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker alicia">Alicia</p>
+        <p>This is something I've been stressing about for years, especially with drawing and sketching. I'd have this really profound vision of what I wanted to draw, try to paint it, and it would always fail — it would always turn out to be something else. So I switched from a realistic style to rough sketches, so I could capture the vibe. That's part of why I moved toward photography — it helps me capture the moment exactly the way I want it. For art I create digitally on a tablet, I can maintain the vision.</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker mia">Mia</p>
+        <p>Has making art ever helped you process something you couldn't articulate otherwise?</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker alicia">Alicia</p>
+        <p>Whenever I'd see something beautiful and try to describe it to my friends or family — like "oh, the dandelion fuzz sticking out of the concrete was really pretty" — they just wouldn't get it, because that description sounds like just a dandelion. But if I captured it well, with the light streaming and shining on it, and showed them, they'd think it was beautiful too, or at least understand what I was trying to say.</p>
+      </div>
+
+    </div>
+
+    <!-- PULL QUOTE 3 -->
+    <div class="pull-quote">
+      <blockquote>"I pour my emotions into what I'm capturing. If I'm with people I care about, I'll take a bunch of photos — I want to capture the moment."</blockquote>
+      <cite>— Alicia</cite>
+    </div>
+
+    <div class="interview-section">
+
+      <div class="exchange">
+        <p class="speaker mia">Mia</p>
+        <p>Do you have any advice for other artists, or for people trying to make art?</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker alicia">Alicia</p>
+        <p>I don't think I have advice for other people. Everyone has their own style and their own creative process. Questions like these lead to different answers for everyone, and I don't think you can create a path for someone else to follow — they'll develop their own vision and their own way.</p>
+      </div>
+
+      <div class="exchange">
+        <p class="speaker alicia">Alicia</p>
+        <p>I do want to add one thing — I take photos of whatever comes up naturally. If I'm with my friends, I'll take a bunch of photos because I think they're beautiful and I want to capture the moment. But for people I don't really care about, or if I'm in a situation where I'm forced to take photos of people I don't like, the photos just aren't the same. I pour my emotions into what I'm capturing.</p>
+      </div>
+
+    </div>
+
+  </div><!-- end .page -->
+
+  <footer>
+    <p><strong>Seeing in the Small: A Conversation with Alicia</strong><br />
+    Interview conducted by Mia &nbsp;·&nbsp; Photography by Alicia</p>
+  </footer>
+
+</body>
+</html>
