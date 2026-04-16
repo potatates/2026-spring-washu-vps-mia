@@ -50,7 +50,7 @@
         <li><a href = "exercises/profile-card.html" > Profile Card</a></li>
         <li><a href = "exercises/collection-of-things/index.html">Collection of Things</a></li>
         <li><a href = "Interview/interview.html">Interview of Alicia</a></li>
-         <li><a href = "writing1.html">Writing 1</a></li>
+        
     </ul>
     <h2>Readings</h2>
     <ul>
@@ -60,7 +60,16 @@
         <li><a href="reading4.html">My website is a shifting house next to a river of knowledge. What could yours be?</a></li>
         <li><a href="reading5.html">Eno</a></li>
         <li><a href="reading6.html">The Coming Age of Calm Technology</a></li>
+        <li><a href="reading7.html">Do Artifacts Have Ethics?</a></li>
         <li>...</li>
+    </ul>
+    <h2>Writings</h2>
+         <li><a href = "writing1.html">Writing 1</a></li>
+         <li><a href = "writing2.html">Writing 2</a></li>
+         <li><a href = "writing3.html">Writing 3</a></li>
+
+    <ul>
+       
     </ul>
     <h2>Projects</h2>
     <ul>
@@ -68,6 +77,17 @@
         <li><a href= "https://www.figma.com/design/CxZaULDV226lUMgAwuvnF9/Enneagram-Book-Website?node-id=71-316&t=KkxIKPNCF1SQBlkc-1" >Project 2. Book → Website</a></li>
         <li>Project 3. Standby Mode</li>
     </ul>
-    </body>
+        <script>
+        function checkTime() {
+            const now = new Date();
+            const cdt = new Date(now.toLocaleString('en-US', { timeZone: 'America/Chicago' }));
+            const h = cdt.getHours(), m = cdt.getMinutes(), day = cdt.getDay();
+            const minutes = h * 60 + m;
+            const inRange = (day === 2 || day === 4) && minutes >= 540 && minutes <= 680;
+            document.body.style.backgroundColor = inRange ? '#F7E8FF' : 'white';
+        }
+        checkTime();
+        setInterval(checkTime, 60000);
+    </script>
 </body>
 </html>
